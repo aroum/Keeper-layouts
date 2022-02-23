@@ -16,7 +16,7 @@ Keeper's layout is a layout for ergo keyboards with 34 keys.
 
 ## Use:
 ### QMK
-* Copy qmk/keymap*.c to ```YOUR_KEYBOARD/keymaps/default/``` and rename it to keymap.c
+* Copy ```qmk/keymap*.c``` to ```YOUR_KEYBOARD/keymaps/default/``` and rename it to keymap.c
   
 * Add to YOUR_KEYBOARD/krules.mk:
   ```
