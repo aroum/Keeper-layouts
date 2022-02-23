@@ -1,4 +1,4 @@
-Keeper's layout is a layout for ergo keyboards with 34 keys. 
+Keeper's layouts are several layout options for ergo keyboards with 34 keys. 
 
 ![Main layer](_images/keeper's-layout-main.png)
 
