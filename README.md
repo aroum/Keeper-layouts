@@ -1,6 +1,6 @@
 Keeper's layouts are several layout options for ergo keyboards with 34 keys. 
 
-![Main layer](_images/keeper's-layout-main.png)
+![Main layer](_images/keeper's-layout-main-github.png)
 
 * [Regular edition](http://www.keyboard-layout-editor.com/#/gists/cacdceee055837862e7ce00b037cfe40) - In most cases, you don't need a full F-row. The main idea was to keep the functionality and logic of the symbols placement using One Shot Mods.
 * [Home row mods edition](http://www.keyboard-layout-editor.com/#/gists/6ba9f3a048292bf0aaaea0070cfa03e5) [work in progress] - Similar to the regular variant, but using Home Row Mods
