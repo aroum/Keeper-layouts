@@ -42,7 +42,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 // Main
 #define KC_LG_S LGUI_T(KC_S)
 #define KC_LC_F LCTL_T(KC_F)
-#define KC_LA_D  LALT_T(KC_D)
+#define KC_LA_D LALT_T(KC_D)
 
 #define KC_LG_L LGUI_T(KC_L)
 #define KC_LC_J LCTL_T(KC_J)
@@ -60,19 +60,20 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 #define KC_L4_ESC LT(4, KC_ESC)
 // Adjust
 
-
 // Combos
-const uint16_t PROGMEM test_combo1[]  = {KC_T, KC_G, COMBO_END};
-const uint16_t PROGMEM test_combo2[]  = {KC_Y, KC_H, COMBO_END};
-const uint16_t PROGMEM test_combo3[]  = {KC_G, KC_B, COMBO_END};
-const uint16_t PROGMEM test_combo4[]  = {KC_H, KC_N, COMBO_END};
-const uint16_t PROGMEM test_combo5[]  = {KC_A, KC_Z, COMBO_END};
-const uint16_t PROGMEM test_combo6[]  = {KC_SCLN, KC_SLSH, COMBO_END};
-const uint16_t PROGMEM test_combo7[]  = {KC_Q, KC_A, COMBO_END};
-const uint16_t PROGMEM test_combo8[]  = {KC_P, KC_SCLN, COMBO_END};
-const uint16_t PROGMEM test_combo9[]  = {KC_PSLS, KC_0, COMBO_END};
+const uint16_t PROGMEM test_combo1[] = {KC_T, KC_G, COMBO_END};
+const uint16_t PROGMEM test_combo2[] = {KC_Y, KC_H, COMBO_END};
+const uint16_t PROGMEM test_combo3[] = {KC_G, KC_B, COMBO_END};
+const uint16_t PROGMEM test_combo4[] = {KC_H, KC_N, COMBO_END};
+const uint16_t PROGMEM test_combo5[] = {KC_A, KC_Z, COMBO_END};
+const uint16_t PROGMEM test_combo6[] = {KC_SCLN, KC_SLSH, COMBO_END};
+const uint16_t PROGMEM test_combo7[] = {KC_Q, KC_A, COMBO_END};
+const uint16_t PROGMEM test_combo8[] = {KC_P, KC_SCLN, COMBO_END};
+const uint16_t PROGMEM test_combo9[] = {KC_PSLS, KC_0, COMBO_END};
 const uint16_t PROGMEM test_combo10[] = {KC_PERC, KC_RPRN, COMBO_END};
 const uint16_t PROGMEM test_combo11[] = {KC_RPRN, KC_F7, COMBO_END};
+const uint16_t PROGMEM test_combo12[] = {KC_LS_SPC, KC_L1_ENT, COMBO_END};
+const uint16_t PROGMEM test_combo13[] = {KC_PAST, KC_PSLS, COMBO_END};
 combo_t key_combos[COMBO_COUNT] = {
     COMBO(test_combo1, KC_TAB),
     COMBO(test_combo2, KC_DEL),
@@ -84,9 +85,9 @@ combo_t key_combos[COMBO_COUNT] = {
     COMBO(test_combo8, KC_LBRC),
     COMBO(test_combo9, KC_EQL),
     COMBO(test_combo10, KC_F1),
-    COMBO(test_combo11, KC_F2)
-};
-
+    COMBO(test_combo11, KC_F2),
+    COMBO(test_combo12, MO(5)),
+    COMBO(test_combo13, KC_F3)};
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [0] = LAYOUT( // Main
@@ -113,7 +114,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                            // └──────────┴──────────┘             └──────────┴──────────┘
 ),
 
-[2] = LAYOUT( // Nav
+[2] = LAYOUT( // LNav
 //┌──────────┬──────────┬──────────┬──────────┬──────────┐                                   ┌──────────┬──────────┬──────────┬──────────┬──────────┐ 
       KC_NO  ,  KC_NO   ,  KC_NO   ,  KC_NO   ,  KC_NO   ,                                     KC_WH_U  ,  KC_HOME ,  KC_MPLY ,  KC_PGUP , KC_VOLU  , 
 //├──────────┼──────────┼──────────┼──────────┼──────────┤                                   ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
@@ -146,6 +147,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_P0    ,   KC_P1  ,   KC_P2  ,   KC_P3  , KC_PAUS  ,                                      KC_SCRL ,  KC_NO   ,  KC_NO   ,  RESET   ,  KC_NO   , 
 //└──────────┴──────────┴──────────┴──────────┼──────────┼──────────┐             ┌──────────┼──────────┼──────────┴──────────┴──────────┴──────────┘  
                                                 KC_LS_SPC,  _______ ,               _______  , KC_BSPC    
+                                           // └──────────┴──────────┘             └──────────┴──────────┘
+),
+[5] = LAYOUT( // RNav
+//┌──────────┬──────────┬──────────┬──────────┬──────────┐                                   ┌──────────┬──────────┬──────────┬──────────┬──────────┐ 
+     KC_VOLU ,  KC_PGUP ,  KC_MPLY , KC_HOME  ,  KC_WH_U ,                                     KC_WH_U  , KC_BTN1  , KC_BTN3  , KC_BTN2  , KC_ACL0  ,  
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                                   ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
+     KC_VOLD ,  KC_LEFT ,   KC_UP  , KC_DOWN  ,  KC_RGHT ,                                     KC_MS_L  , KC_MS_D  , KC_MS_U  , KC_MS_R  , KC_ACL1  ,  
+//├──────────┼──────────┼──────────┼──────────┼──────────┤                                   ├──────────┼──────────┼──────────┼──────────┼──────────┤ 
+     KC_MUTE ,  KC_PGDN ,  SCRCUT  ,  KC_END  ,  KC_WH_D ,                                     KC_WH_D  , KC_WH_L  , KC_WH_R  ,  KC_NO   , KC_ACL2  , 
+//└──────────┴──────────┴──────────┴──────────┼──────────┼──────────┐             ┌──────────┼──────────┼──────────┴──────────┴──────────┴──────────┘ 
+                                                 _______ ,  _______  ,               KC_BTN1  , KC_BTN2 
                                            // └──────────┴──────────┘             └──────────┴──────────┘
 )
 };

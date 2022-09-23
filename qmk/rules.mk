@@ -37,7 +37,7 @@ SLEEP_LED_ENABLE = no    # Breathing sleep LED during USB suspend
 LTO_ENABLE = yes
 
 OLED_DRIVER_ENABLE  = no
-MOUSEKEY_ENABLE = no
+MOUSEKEY_ENABLE = yes
 NKRO_ENABLE = yes
 EXTRAKEY_ENABLE = yes
 SPLIT_KEYBOARD = yes

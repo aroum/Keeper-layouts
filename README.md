@@ -1,4 +1,6 @@
-Keeper's layout are 34-key variation of the Watchman's layout. Due to the use of chords, it was possible to adapt the layout for 34-key keyboards with minimal changes.
+Keeper's layout are 34-key variation of the Watchman's layout. When using chords, it was possible to adapt Watchman's layout for 34-key keyboards with minimal changes.
+
+The layout is not a universal solution, it is a source of inspiration
 
 ![Main layer](kle/keeper's-layout-chord-edition.png)
 
